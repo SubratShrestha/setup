@@ -121,3 +121,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=$PATH:/opt/gradle/gradle-5.4.1/bin
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/java
+export JAVA_HOME=/opt/jdk8u292-b10
+export ANDROID_HOME=/home/subrat/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+eval "$(oh-my-posh --init --shell bash --config ~/posh-themes/.mytheme.omp.json)"

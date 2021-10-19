@@ -1,4 +1,3 @@
-# WSL
 alias exp='explorer.exe .'
 alias notepad='notepad.exe'
 alias ..='cd ../'
@@ -11,14 +10,9 @@ alias win-proj='cd /mnt/d/Projects'
 alias lin-proj='cd /home/subrat/projects'
 alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
 alias bashrc='code /home/subrat/.bash_aliases'
-alias get-ssh='cat ~/.ssh/id_rsa.pub | xclip -sel clip'
+alias uni='cd /mnt/d/College'
+alias shortcuts='python3 /home/subrat/scripts/sh.py'
+alias scripts='cd /home/subrat/scripts/'
 
-# Linux
-alias exp='nautilus . &'
-alias note='gedit'
-alias ..='cd ../'
-alias ...='cd ../../'
-alias d='cd /run/media/subrat/DATA'
-alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
-alias bashrc='code /home/subrat/.bash_aliases'
-alias get-ssh='cat ~/.ssh/id_rsa.pub | xclip -sel clip'
+# functions
+course() { cd "/mnt/d/College/$1-Comp"; }

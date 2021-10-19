@@ -1,3 +1,4 @@
+# Script to display all custom shortcuts/aliases
 print("Custom shortcuts:")
 printing_functions = False
 

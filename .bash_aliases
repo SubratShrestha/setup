@@ -11,8 +11,8 @@ alias lin-proj='cd /home/subrat/projects'
 alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
 alias bashrc='code /home/subrat/.bash_aliases'
 alias uni='cd /mnt/d/College'
-alias shortcuts='python3 /home/subrat/scripts/sh.py'
-alias scripts='cd /home/subrat/scripts/'
+alias shortcuts='python3 /home/subrat/setup/sh.py'
+alias scripts='cd /home/subrat/setup/'
 
 # functions
 course() { cd "/mnt/d/College/$1-Comp"; }

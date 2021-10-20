@@ -13,6 +13,7 @@ alias bashrc='code /home/subrat/.bash_aliases'
 alias uni='cd /mnt/d/College'
 alias shortcuts='python3 /home/subrat/setup/sh.py'
 alias scripts='cd /home/subrat/setup/'
+alias nvim-config='nvim .config/nvim/init.vim'
 
 # functions
 course() { cd "/mnt/d/College/$1-Comp"; }

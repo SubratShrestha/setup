@@ -127,3 +127,5 @@ export ANDROID_HOME=/home/subrat/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 eval "$(oh-my-posh --init --shell bash --config ~/posh-themes/.mytheme.omp.json)"
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

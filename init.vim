@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'preservim/nerdtree'
 	Plug 'ctrlpvim/ctrlp.vim', {'branch': 'release'}
     Plug 'joshdick/onedark.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 

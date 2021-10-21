@@ -17,3 +17,14 @@ alias nvim-config='nvim .config/nvim/init.vim'
 
 # functions
 course() { cd "/mnt/d/College/$1-Comp"; }
+compile() { 
+        if [ $# -eq 1 ]
+        then
+                g++ -Wall -g $1;
+        elif [ $# -eq 2 ]
+        then
+                g++ -Wall -g $1 -o $2;
+        else
+                echo "Usage: compile [file.cpp] [output] or compile [file.cpp] (output in a.out)";
+        fi
+}

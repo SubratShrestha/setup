@@ -14,6 +14,11 @@ alias uni='cd /mnt/d/College'
 alias shortcuts='python3 /home/subrat/setup/sh.py'
 alias scripts='cd /home/subrat/setup/'
 alias nvim-config='nvim .config/nvim/init.vim'
+alias gfp='git fetch && git pull'
+alias gp='git pull'
+alias gs='git status'
+alias restart='exec bash'
+
 
 # functions
 course() { cd "/mnt/d/College/$1-Comp"; }
@@ -25,6 +30,24 @@ compile() {
         then
                 g++ -Wall -g $1 -o $2;
         else
-                echo "Usage: compile [file.cpp] [output] or compile [file.cpp] (output in a.out)";
+                echo "Usage: compile [file.cpp] [output]";
         fi
+}
+
+ga() {
+    if [ $# -eq 0 ]
+    then
+        git add .
+    else
+        git add $@
+    fi
+}
+
+gc() {
+    if [ $# -eq 1 ]
+    then
+        git commit -m "$1";
+    else
+        echo "Usage: gc \"commit message\"";
+    fi
 }

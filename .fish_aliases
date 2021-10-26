@@ -1,0 +1,56 @@
+alias exp='explorer.exe .'
+alias notepad='notepad.exe'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias c='cd /mnt/c/'
+alias d='cd /mnt/d/'
+alias desk='cd /mnt/c/Users/subra/Desktop/'
+alias docs='cd /mnt/c/Users/subra/Documents/'
+alias win-proj='cd /mnt/d/Projects'
+alias lin-proj='cd /home/subrat/projects'
+alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
+alias bashrc='code /home/subrat/.bash_aliases'
+alias uni='cd /mnt/d/College'
+alias shortcuts='python3 /home/subrat/setup/sh.py'
+alias scripts='cd /home/subrat/setup/'
+alias nvim-config='nvim /home/subrat/.config/nvim/init.vim'
+alias gfp='git fetch && git pull'
+alias gp='git pull'
+alias gs='git status'
+alias restart='exec bash'
+
+
+# functions
+function course 
+    if test (count $argv) != 1
+        echo "Usage: course [course-code]"
+    else
+        cd "/mnt/d/College/$argv[1]-Comp"
+    end
+end
+
+function compile 
+    if [ (count $argv) = 1 ]
+        g++ -Wall -g $argv[1];
+    else if [ (count $argv) = 2 ]
+        g++ -Wall -g $argv[1] -o $argv[2];
+    else
+        echo "Usage: compile [file.cpp] [output]";
+    end
+end
+
+function ga
+    if [ (count $argv) = 0 ]
+        git add .
+    else
+        git add $argv
+    end
+end
+
+function gc
+    if [ (count $argv) = 1 ]
+        git commit -m "$argv[1]";
+    else
+        echo "Usage: gc \"commit message\"";
+    end 
+end

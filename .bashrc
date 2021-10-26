@@ -129,3 +129,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 eval "$(oh-my-posh --init --shell bash --config ~/posh-themes/.mytheme.omp.json)"
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Run TMUX on startup. Make sure TMUX exists, we're in interactive shell, and we're not running TMUX within itself.
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi

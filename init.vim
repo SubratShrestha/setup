@@ -8,6 +8,12 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim', {'branch': 'release'}
     Plug 'joshdick/onedark.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    Plug 'sbdchd/neoformat'
 
 call plug#end()
 
@@ -15,7 +21,8 @@ map <silent> <C-n> :NERDTreeFocus<CR>
 
 filetype plugin indent on
 syntax on
-colorscheme onedark
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 set number
 set nowrap
 set smartcase 
@@ -31,6 +38,8 @@ set incsearch
 set scrolloff=8
 set nohlsearch
 set colorcolumn=80
+set clipboard=unnamedplus
+set mouse=a
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some 
 " unicode characters in the file autoload/float.vim
@@ -56,6 +65,17 @@ set shortmess+=c
 
 " Ctrl-s for save
 nnoremap <C-s> :w<CR>
+
+" Remap splits navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Ctrl-left/right for tab switch
+nnoremap <C-Right> gt
+nnoremap <C-Left> gT
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.5.0") || has("patch-8.1.1564")

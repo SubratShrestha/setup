@@ -11,7 +11,7 @@ if status is-interactive
 
      
     # Run TMUX on startup. Make sure TMUX exists, we're in interactive shell, and we're not running TMUX within itself.
-    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]
+    if command -v tmux &> /dev/null && [ "$TERM" != screen ] && [ "$TERM" != tmux ] && [ -z "$TMUX" ]
       exec tmux
     end
 end

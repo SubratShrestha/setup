@@ -13,7 +13,6 @@ set nocompatible
 
 " air-line
  let g:airline_powerline_fonts = 1
- " let g:airline_theme='onedark'
 
 " c++ syntax highlighting
 let g:cpp_class_scope_highlight = 1
@@ -63,7 +62,6 @@ call plug#end()
     set colorcolumn=80
     highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
     set mouse=a
-    :highlight LineNr ctermfg=white
     set clipboard=unnamedplus
 
     " Ctrl-s for save
@@ -80,10 +78,16 @@ call plug#end()
     nnoremap <C-Left> gT
 
     " ff to RipGrep
-    nnoremap  ff :Rg<CR>
+    nnoremap  <leader>ff :Rg<CR>
 
+    " leader wq to write quit, leader q to quit
+    nnoremap ;q :q<CR>
+    nnoremap ;w :wq<CR>
 
-    autocmd FileType cpp    nnoremap <leader>dsa :vsplit /home/subrat/projects/dsa<CR>
+    autocmd FileType cpp    nnoremap ;dsa :vsplit /home/subrat/projects/dsa<CR>
+    autocmd FileType cpp    nnoremap ;io i#include<iostream><CR><Esc>
+    autocmd FileType cpp    nnoremap ;ve i#include<vector><CR><Esc>
+    autocmd FileType cpp    nnoremap ;al i#include<algorithm><CR><Esc>
 " =============================================================================
 
 

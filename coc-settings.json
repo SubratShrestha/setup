@@ -19,7 +19,12 @@
             "initializationOptions": {
                 "cache": {
                     "directory": "/tmp/ccls"
-                }
+                },
+                "index": {
+                    "onChange": true
+                  },
+              // This is mandatory!
+              "highlight": { "lsRanges" : true }
             }
         }
     }

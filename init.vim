@@ -1,15 +1,31 @@
+let mapleader = " " 
+
+" Enable true color
+ if exists('+termguicolors')
+   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+   set termguicolors
+ endif
+ 
 set nocompatible
-filetype off
-let g:doom_one_terminal_colors = v:true
+" filetype off
+" let g:doom_one_terminal_colors = v:true
 
 " air-line
-let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+ let g:airline_powerline_fonts = 1
+ " let g:airline_theme='onedark'
 
+" c++ syntax highlighting
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
+
+" Plugins
 call plug#begin('~/.config/nvim/plugged')
-	Plug 'tpope/vim-fugitive'
-	Plug 'preservim/nerdtree'
-	Plug 'ctrlpvim/ctrlp.vim', {'branch': 'release'}
+    Plug 'tpope/vim-fugitive'
+    Plug 'preservim/nerdtree'
+    Plug 'ctrlpvim/ctrlp.vim', {'branch': 'release'}
     Plug 'joshdick/onedark.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'leafgarland/typescript-vim'
@@ -21,33 +37,35 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'romgrk/doom-one.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
-map <silent> <C-n> :NERDTreeFocus<CR>
-
-filetype plugin indent on
-syntax on
-set number
-set nowrap
-set smartcase 
-set ignorecase
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set relativenumber
-set nu
-set incsearch
-set scrolloff=8
-set nohlsearch
-set colorcolumn=80
-highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
-set mouse=a
-:highlight LineNr ctermfg=white
-
-
 " =============================== MY SETTINGS =================================
+    map <silent> <C-n> :NERDTreeFocus<CR>
+
+    filetype plugin indent on
+    syntax on
+    colorscheme onedark 
+    set number
+    set nowrap
+    set smartcase 
+    set ignorecase
+    set noerrorbells
+    set tabstop=4 softtabstop=4
+    set shiftwidth=4
+    set expandtab
+    set smartindent
+    set relativenumber
+    set nu
+    set incsearch
+    set scrolloff=8
+    set nohlsearch
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
+    set mouse=a
+    :highlight LineNr ctermfg=white
+    set clipboard=unnamedplus
+
     " Ctrl-s for save
     nnoremap <C-s> :w<CR>
 
@@ -61,15 +79,11 @@ set mouse=a
     nnoremap <C-Right> gt
     nnoremap <C-Left> gT
 
-    " q-q to quit vim
-    nnoremap qq :q<CR>
-
-    " w-q to write and then quit vim
-    nnoremap wq :wq<CR>
+    " ff to RipGrep
+    nnoremap  ff :Rg<CR>
 
 
-    " Ctrl-Shift F to RipGrep
-    nnoremap ff :Rg<CR>
+    autocmd FileType cpp    nnoremap <leader>dsa :vsplit /home/subrat/projects/dsa<CR>
 " =============================================================================
 
 

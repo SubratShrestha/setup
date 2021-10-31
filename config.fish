@@ -1,6 +1,11 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
+    # No greeting when starting an interactive shell.
+    function fish_greeting
+    end
+
+
     # Expand .fish_aliases if it exists
     if [ -f /home/subrat/.config/fish/.fish_aliases ]
         . /home/subrat/.config/fish/.fish_aliases
@@ -12,6 +17,8 @@ if status is-interactive
      
     # Run TMUX on startup. Make sure TMUX exists, we're in interactive shell, and we're not running TMUX within itself.
     if command -v tmux &> /dev/null && [ "$TERM" != screen ] && [ "$TERM" != tmux ] && [ -z "$TMUX" ]
-      exec tmux
+        exec tmux
     end
+
+    nvm install 2>/dev/null 1>/dev/null
 end

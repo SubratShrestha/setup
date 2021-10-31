@@ -84,6 +84,11 @@ call plug#end()
     nnoremap ;q :q<CR>
     nnoremap ;w :wq<CR>
 
+    " Ctrl a to beginning
+    map <C-a> <Esc>^
+    map <C-e> <Esc>$
+    map <C-A> <Esc>^i
+
     autocmd FileType cpp    nnoremap ;dsa :vsplit /home/subrat/projects/dsa<CR>
     autocmd FileType cpp    nnoremap ;io i#include<iostream><CR><Esc>
     autocmd FileType cpp    nnoremap ;ve i#include<vector><CR><Esc>

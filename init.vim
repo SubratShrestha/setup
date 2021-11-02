@@ -13,6 +13,13 @@ set nocompatible
 
 " air-line
  let g:airline_powerline_fonts = 1
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+set noshowmode
 
 " c++ syntax highlighting
 let g:cpp_class_scope_highlight = 1
@@ -37,6 +44,10 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'honza/vim-snippets'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " =============================== MY SETTINGS =================================

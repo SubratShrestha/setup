@@ -11,13 +11,13 @@ alias lin-proj='cd /home/subrat/projects'
 alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
 alias bashrc='code /home/subrat/.bash_aliases'
 alias uni='cd /mnt/d/College'
-alias shortcuts='python3 /home/subrat/setup/sh.py'
-alias scripts='cd /home/subrat/setup/'
+alias shortcuts='python3 /home/subrat/setup/scripts/sh.py'
+alias scripts='cd /home/subrat/setup/scripts'
 alias nvim-config='nvim /home/subrat/.config/nvim/init.vim'
 alias gfp='git fetch && git pull'
 alias gp='git pull'
 alias gs='git status'
-alias restart='exec bash'
+alias restart='exec fish'
 
 
 # functions

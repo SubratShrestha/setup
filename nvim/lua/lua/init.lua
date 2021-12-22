@@ -1,0 +1,1 @@
+/home/subrat/setup/nvim/lua/init.lua

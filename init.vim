@@ -12,7 +12,7 @@ set nocompatible
 " let g:doom_one_terminal_colors = v:true
 
 " air-line
- let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
@@ -20,6 +20,9 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 set noshowmode
+
+" make nerdtree use tabs
+let NERDTreeMapOpenInTab='<ENTER>'
 
 " c++ syntax highlighting
 let g:cpp_class_scope_highlight = 1
@@ -47,7 +50,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
-
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'Nopik/vim-nerdtree-direnter'
 call plug#end()
 
 " =============================== MY SETTINGS =================================
@@ -88,22 +92,20 @@ call plug#end()
     nnoremap <C-Right> gt
     nnoremap <C-Left> gT
 
+    " Ctrl-Shift-left/right for buffer switch
+    nnoremap <leader>[ <Esc>:bp<CR>
+    nnoremap <leader>] <Esc>:bn<CR>
+
     " ff to RipGrep
     nnoremap  <leader>ff :Rg<CR>
-
-    " leader wq to write quit, leader q to quit
-    nnoremap ;q :q<CR>
-    nnoremap ;w :wq<CR>
 
     " Ctrl a to beginning
     map <C-a> <Esc>^
     map <C-e> <Esc>$
     map <C-A> <Esc>^i
 
-    autocmd FileType cpp    nnoremap ;dsa :vsplit /home/subrat/projects/dsa<CR>
-    autocmd FileType cpp    nnoremap ;io i#include<iostream><CR><Esc>
-    autocmd FileType cpp    nnoremap ;ve i#include<vector><CR><Esc>
-    autocmd FileType cpp    nnoremap ;al i#include<algorithm><CR><Esc>
+    autocmd FileType cpp    nnoremap <leader>dsa :vsplit /home/subrat/projects/dsa<CR>
+
 " =============================================================================
 
 

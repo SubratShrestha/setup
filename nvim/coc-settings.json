@@ -27,5 +27,6 @@
               "highlight": { "lsRanges" : true }
             }
         }
-    }
+    },
+    "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "javascriptreact", "typescriptreact", "json", "css"]
 }

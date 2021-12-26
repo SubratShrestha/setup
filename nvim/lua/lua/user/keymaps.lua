@@ -25,7 +25,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -40,7 +40,14 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Ctrl-s to save
 keymap("n", "<C-s>", ":w<CR>", opts)
 
--- Visual --
+-- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
+
+-- <leader> q to quit
+keymap("n", "<leader>q", ":q<CR>", opts)
+
+---------------------- Visual -------------------------
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)

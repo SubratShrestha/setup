@@ -84,7 +84,13 @@ return packer.startup(function(use)
     config = function() require'nvim-tree'.setup {} end
   }
 
-  use "windwp/nvim-autopairs"
+  use "windwp/nvim-autopairs" -- autocomplete pairs
+
+  -- Easily comment stuff
+  use "numToStr/Comment.nvim"
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  use "lewis6991/gitsigns.nvim" -- git indicators
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

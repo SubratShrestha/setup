@@ -89,7 +89,9 @@ return packer.startup(function(use)
 
   use "akinsho/toggleterm.nvim" -- toggle terminal
 
-  use "romgrk/barbar.nvim"
+  use "romgrk/barbar.nvim" -- buffers implemented as tabs 
+
+  use 'nvim-lualine/lualine.nvim' -- bottom bar
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

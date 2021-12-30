@@ -1,6 +1,21 @@
 -- :help options
 vim.opt.backup = false                          -- creates a backup file
+
+-- Use windows clipboard with win32yank.
+-- Move win32yank.exe to somewhere in path, and make it executable with chmod +x.
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
+vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+        ['+'] = "win32yank.exe -i --crlf",
+        ['*'] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+        ['+'] = "win32yank.exe -o --lf",
+        ['*'] = "win32yank.exe -o --lf",
+    },
+    cache_enabled = 0,
+}
 vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files

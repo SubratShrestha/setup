@@ -54,3 +54,11 @@ function gc
         echo "Usage: gc \"commit message\"";
     end 
 end
+
+function copy
+    if [ (count $argv) = 1 ]
+        clip.exe < "$argv[1]";
+    else
+        echo "Usage: copy <filename>";
+    end
+end

@@ -8,6 +8,7 @@ repository to the application's default config location.
 Default config locations:
 - Fish: `~/.config/fish/`
 - nvim: `~/.config/nvim/`
+  - plugins: `~/.local/share/nvim`
 - bash: `~/`
 
 

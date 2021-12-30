@@ -41,6 +41,9 @@ keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 -- Ctrl-s to save
 keymap("n", "<C-s>", ":w<CR>", opts)
 
+-- Ctrl-s to save
+keymap("n", "<C-q>", ":q<CR>", opts)
+
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap(
 	"n",
@@ -49,9 +52,6 @@ keymap(
 	opts
 )
 keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
-
--- <leader> q to quit
-keymap("n", "<leader>q", ":q<CR>", opts)
 
 -- <leader> t to toggle terminal, mapping in toggleTerm.lua causes issues with
 -- leader in insert mode, even when mapped to <Nop>

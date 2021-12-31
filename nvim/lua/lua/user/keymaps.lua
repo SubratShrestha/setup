@@ -60,6 +60,11 @@ keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
 -- <leader>lf to format using null-ls
 keymap("n", "<leader>lf", ":Format<CR>", opts)
 
+-- Git stuff
+keymap("n", "<leader>gg", ":Git<CR>", opts)
+keymap("n", "<leader>gc", ":Git commit<CR>", opts)
+keymap("n", "<leader>gp", ":Git push<CR>", opts)
+
 ---------------------- Visual -------------------------
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

@@ -56,6 +56,7 @@ keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
 -- <leader> t to toggle terminal, mapping in toggleTerm.lua causes issues with
 -- leader in insert mode, even when mapped to <Nop>
 keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
+keymap("n", "<leader>T", ":vsp | term<CR>", opts)
 
 -- <leader>lf to format using null-ls
 keymap("n", "<leader>lf", ":Format<CR>", opts)

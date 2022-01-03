@@ -38,34 +38,6 @@ keymap("n", "<C-Right>", ":BufferNext<CR>", opts)
 keymap("n", "<C-Left>", ":BufferPrev<CR>", opts)
 keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
--- Ctrl-s to save
-keymap("n", "<C-s>", ":w<CR>", opts)
-
--- Ctrl-s to save
-keymap("n", "<C-q>", ":q<CR>", opts)
-
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap(
-	"n",
-	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
-	opts
-)
-keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
-
--- <leader> t to toggle terminal, mapping in toggleTerm.lua causes issues with
--- leader in insert mode, even when mapped to <Nop>
-keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
-keymap("n", "<leader>T", ":vsp | term<CR>", opts)
-
--- <leader>lf to format using null-ls
-keymap("n", "<leader>lf", ":Format<CR>", opts)
-
--- Git stuff
-keymap("n", "<leader>gg", ":Git<CR>", opts)
-keymap("n", "<leader>gc", ":Git commit<CR>", opts)
-keymap("n", "<leader>gp", ":Git push<CR>", opts)
-
 ---------------------- Visual -------------------------
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

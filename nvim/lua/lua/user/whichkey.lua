@@ -87,6 +87,7 @@ local mappings = {
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+    ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Markdown" },
 
 	p = {
 		name = "Packer",

@@ -103,6 +103,7 @@ local mappings = {
 		g = { "<cmd>Git<CR>", "Open git (fugitive)" },
 		c = { "<cmd>Git commit<CR>", "Git commit" },
 		p = { "<cmd>Git push<CR>", "Git push" },
+        d = {"<cmd>Git diff<CR>", "Git diff"}
 	},
 
 	l = {

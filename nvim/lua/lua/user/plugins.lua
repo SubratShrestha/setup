@@ -66,7 +66,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 	-- TreeSitter
-	use({
+    	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
@@ -104,6 +104,8 @@ return packer.startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
+
+    use('norcalli/nvim-colorizer.lua') -- color preview
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

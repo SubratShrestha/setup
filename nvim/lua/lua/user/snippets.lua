@@ -38,7 +38,7 @@ ls.snippets = {
 			t({ "", "}" }),
 		}),
 		s("std", {
-			t({ "#include<iostream>", "", "using namespace std;", "", "" }),
+			t({ "#include<bits/stdc++.h>", "", "using namespace std;", "", "" }),
 			i(0),
 		}),
         s("nl", {

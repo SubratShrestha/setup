@@ -32,18 +32,33 @@ ls.snippets = {
 	cpp = {
 		s("main", {
 			t("int main() {"),
+            t({ "", "\tcin.tie(nullptr);", "\tcin.sync_with_stdio(false);", ""}),
 			t({ "", "\t" }),
 			i(0),
 			t({ "", "\treturn 0;" }),
 			t({ "", "}" }),
 		}),
 		s("std", {
-			t({ "#include<bits/stdc++.h>", "", "using namespace std;", "", "" }),
+			t({ "#include<bits/stdc++.h>", "", "using namespace std;", "", "typedef long long ll;", "", "" }),
 			i(0),
 		}),
         s("nl", {
             t("<< '\\n'"),
             i(0)
+        }),
+        s("vi", {
+            t({ "vector<int> " }),
+            i(0),
+            t(";")
+        }),
+        s("fora", {
+            t("for(auto "),
+            i(1),
+            t(": "),
+            i(2),
+            t({ ") {", "\t" }),
+            i(3),
+            t({ "", "}" })
         })
 	},
 }

@@ -41,7 +41,6 @@ vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 4 -- insert 2 spaces for a tab
 vim.opt.cursorline = false -- highlight the current line
 vim.opt.number = true -- set numbered lines
-vim.opt.relativenumber = true -- set relative numbered lines
 vim.opt.numberwidth = 4 -- set number column width to 4 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = false -- display lines as one long line
@@ -53,3 +52,8 @@ vim.opt.shortmess:append("c")
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
+
+-- -- enable filetype-specific settings
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+

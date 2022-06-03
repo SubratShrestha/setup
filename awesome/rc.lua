@@ -429,6 +429,10 @@ globalkeys = gears.table.join(
 		awful.util.spawn("/home/subrat/.config/rofi/custom/power.sh")
 	end, { description = "Logout, Shutdown, etc.", group = "launcher" }),
 
+	awful.key({ modkey }, ".", function()
+		awful.util.spawn("emoji-picker &")
+	end, { description = "Emoji picker", group = "launcher" }),
+
 	-- Volume controls
 	awful.key({}, "XF86AudioRaiseVolume", function()
 		awful.util.spawn("amixer -c 0 set Master 5dB+", false)
@@ -682,6 +686,7 @@ end)
 -- }}}
 
 -- Auto start
+awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("awesome_startup")
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")

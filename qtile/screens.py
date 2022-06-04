@@ -63,7 +63,6 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f'
                        ),    
-                widget.battery,
                 widget.Clock(
                        format=' %a %d %b %I:%M %p',
                        background="#2f343f",

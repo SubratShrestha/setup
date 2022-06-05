@@ -21,6 +21,13 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-Right>"] = ":BufferLineCycleNext<cr>"
 lvim.keys.normal_mode["<C-Left>"] = ":BufferLineCyclePrev<cr>"
+
+-- Resize with arrows
+lvim.keys.normal_mode["<A-Up>"] = ":resize +2<CR>"
+lvim.keys.normal_mode["<A-Down>"] = ":resize -2<CR>"
+lvim.keys.normal_mode["<A-Right>"] = ":vertical resize +2<CR>"
+lvim.keys.normal_mode["<A-Left>"] = ":vertical resize -2<CR>"
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -45,7 +52,6 @@ lvim.keys.normal_mode["<C-Left>"] = ":BufferLineCyclePrev<cr>"
 -- }
 
 -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["g"] = {
   name = "+Git",
   g = { "<cmd>:Git<cr>", "Open Fugitive menu" },
@@ -146,14 +152,17 @@ linters.setup {
 
 -- Custom Plugins
 lvim.plugins = {
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  {
-    "tpope/vim-fugitive"
-  }
+  { "tpope/vim-fugitive" },
+  { "norcalli/nvim-colorizer.lua" }
 }
+
+-- Custom plugin init commands
+local status_ok, colorizer = pcall(require, "colorizer")
+if not status_ok then
+  return
+end
+
+colorizer.setup()
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {

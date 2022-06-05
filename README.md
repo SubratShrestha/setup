@@ -10,5 +10,4 @@ Default config locations:
 - nvim: `~/.config/nvim/`
   - plugins: `~/.local/share/nvim`
 - bash: `~/`
-
-
+- lunarvim: `~/.config/lvim/`

@@ -18,7 +18,8 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight - 10"), desc="Decrease brightness"),
     Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight + 10"), desc="Increase brightness"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
-    
+    Key([mod, "shift"], "s", lazy.spawn("scrot -s /home/subrat/Pictures/screenshots/"), desc="Take screenshot of a region"),
+    Key([mod], "Print", lazy.spawn("scrot /home/subrat/Pictures/screenshots/"), desc="Take screenshot"),
 
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),

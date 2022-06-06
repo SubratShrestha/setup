@@ -6,11 +6,7 @@ terminal = "alacritty"
 
 keys = [
     # Custom keybindings
-    Key([mod],
-        "space",
-        lazy.spawn("rofi -show drun"),
-        desc="Open application menu"),
-
+    Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Open application menu"),
     Key([mod], "e", lazy.spawn("thunar"), desc="Open file explorer"),
     Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Switch windows"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch browser"),
@@ -21,6 +17,7 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("scrot -s /home/subrat/Pictures/screenshots/"), desc="Take screenshot of a region"),
     Key([mod], "Print", lazy.spawn("scrot /home/subrat/Pictures/screenshots/"), desc="Take screenshot"),
     Key([mod], "c", lazy.spawn("rofi -show calc"), desc="Run the rofi calculator"),
+    Key(["control", "shift"], "l", lazy.spawn("/home/subrat/.config/rofi/powermenu.sh"), desc="Power menu"),
 
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),

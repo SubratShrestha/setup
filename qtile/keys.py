@@ -17,7 +17,9 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("scrot -s /home/subrat/Pictures/screenshots/"), desc="Take screenshot of a region"),
     Key([mod], "Print", lazy.spawn("scrot /home/subrat/Pictures/screenshots/"), desc="Take screenshot"),
     Key([mod], "c", lazy.spawn("rofi -show calc"), desc="Run the rofi calculator"),
-    Key(["control", "shift"], "l", lazy.spawn("/home/subrat/.config/rofi/powermenu.sh"), desc="Power menu"),
+    Key([mod], "p", lazy.spawn("/home/subrat/.config/rofi/powermenu.sh"), desc="Power menu"),
+    Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(["control", "shift"], "l", lazy.spawn("dm-tool switch-to-greeter"), desc="Lock the screen"),
 
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
@@ -68,7 +70,6 @@ keys = [
         "Return",
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),

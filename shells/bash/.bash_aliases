@@ -1,39 +1,40 @@
-alias exp='explorer.exe .'
-alias notepad='notepad.exe'
+explorer="thunar"
+textEditor="lvim"
+codeEditor="lvim"
+desktopLocation="~/Desktop/"
+docsLocation="~/Documents/"
+downloadsLocation="~/Downloads/"
+projectsLocation="~/projects/"
+uniLocation="~/Documents/uni/"
+
+alias exp='$explorer . &'
+alias note='$textEditor'
 alias ..='cd ../'
 alias ...='cd ../../'
-alias c='cd /mnt/c/'
-alias d='cd /mnt/d/'
-alias desk='cd /mnt/c/Users/subra/Desktop/'
-alias docs='cd /mnt/c/Users/subra/Documents/'
-alias win-proj='cd /mnt/d/Projects'
-alias lin-proj='cd /home/subrat/projects'
+alias desk='cd $desktopLocation'
+alias docs='cd $docsLocation'
+alias proj='cd $projectsLocation'
 alias unsw-ssh='ssh -Y z5266273@login.cse.unsw.edu.au'
-alias bashrc='code /home/subrat/.bash_aliases'
-alias uni='cd /mnt/d/College'
-alias shortcuts='python3 /home/subrat/setup/scripts/sh.py'
-alias scripts='cd /home/subrat/setup/scripts'
-alias nvim-config='nvim /home/subrat/.config/nvim/init.vim'
+alias bashrc='$codeEditor ~/.bash_aliases'
+alias uni='cd $uniLocation'
 alias gfp='git fetch && git pull'
 alias gp='git pull'
 alias gs='git status'
-alias restart='exec bash'
 
-
-# functions
-course() { cd "/mnt/d/College/$1-Comp"; }
+# C++ Complile
 compile() { 
-        if [ $# -eq 1 ]
-        then
-                g++ -Wall -g $1;
-        elif [ $# -eq 2 ]
-        then
-                g++ -Wall -g $1 -o $2;
-        else
-                echo "Usage: compile [file.cpp] [output]";
-        fi
+    if [ $# -eq 1 ]
+    then
+            g++ -Wall -g $1;
+    elif [ $# -eq 2 ]
+    then
+            g++ -Wall -g $1 -o $2;
+    else
+            echo "Usage: compile [file.cpp] [output]";
+    fi
 }
 
+# Git add
 ga() {
     if [ $# -eq 0 ]
     then
@@ -43,6 +44,7 @@ ga() {
     fi
 }
 
+# Git commit
 gc() {
     if [ $# -eq 1 ]
     then

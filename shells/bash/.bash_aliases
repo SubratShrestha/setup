@@ -1,6 +1,6 @@
 explorer="thunar"
-textEditor="lvim"
-codeEditor="lvim"
+textEditor="nvim"
+codeEditor="nvim"
 desktopLocation="~/Desktop/"
 docsLocation="~/Documents/"
 downloadsLocation="~/Downloads/"
@@ -20,6 +20,7 @@ alias uni='cd $uniLocation'
 alias gfp='git fetch && git pull'
 alias gp='git pull'
 alias gs='git status'
+alias v="$codeEditor"
 
 # C++ Complile
 compile() { 

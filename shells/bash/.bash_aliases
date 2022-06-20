@@ -6,6 +6,8 @@ docsLocation="~/Documents/"
 downloadsLocation="~/Downloads/"
 projectsLocation="~/projects/"
 uniLocation="~/Documents/uni/"
+installCommand="sudo pacman -S "
+searchCommand="pacman -Q "
 
 alias exp='$explorer . &'
 alias note='$textEditor'
@@ -21,6 +23,8 @@ alias gfp='git fetch && git pull'
 alias gp='git pull'
 alias gs='git status'
 alias v="$codeEditor"
+alias install="$installCommand"
+alias search="$searchCommand"
 
 # C++ Complile
 compile() { 

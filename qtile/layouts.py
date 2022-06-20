@@ -2,13 +2,14 @@ from libqtile import layout
 from libqtile.config import Match
 
 layouts = [
+    layout.Bsp(margin=6, border_focus='#5294e2',
+                     border_normal='#2c5380'),
     layout.MonadTall(margin=12, border_focus='#5294e2',
                      border_normal='#2c5380'),
     # layout.Columns(border_focus_stack='#d75f5f'),
     # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
     # layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),

@@ -10,7 +10,6 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar"), desc="Open file explorer"),
     Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Switch windows"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch browser"),
-    Key([mod, "control", "shift"], "l", lazy.spawn("~/.config/rofi/powermenu.sh"), desc="Show power menu"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight - 10"), desc="Decrease brightness"),
     Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight + 10"), desc="Increase brightness"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),

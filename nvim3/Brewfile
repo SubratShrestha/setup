@@ -1,0 +1,23 @@
+# Shell tools required by this Neovim config. Install with: brew bundle
+# (see README.md for what each one is for)
+
+# Editor
+brew "neovim"   # 0.12+ (uses the built-in vim.pack plugin manager)
+brew "git"      # vim.pack clones plugins with git
+
+# Telescope
+brew "ripgrep"  # live_grep (<leader>F) and find_files (<leader>f)
+
+# Treesitter
+brew "tree-sitter-cli"  # nvim-treesitter (main branch) compiles parsers with it
+
+# Language servers
+brew "gopls"                         # Go
+brew "bash-language-server"          # Bash / sh
+brew "typescript"                    # TypeScript 7 native `tsc --lsp` (JS / TS)
+brew "pyright"                       # Python
+brew "ruff"                          # Python formatting and linting
+brew "vscode-langservers-extracted"  # JSON (vscode-json-language-server)
+
+# Formatters
+brew "shfmt"  # bash-language-server formats with it
